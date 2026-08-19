@@ -1,0 +1,35 @@
+{
+  "id": "sam",
+  "name": "Southern Annular Mode",
+  "short_name": "SAM",
+  "source_name": "Antarctic Oscillation",
+  "source_short_name": "AAO",
+  "source_institution": "NOAA Climate Prediction Center",
+  "source_url": "https://ftp.cpc.ncep.noaa.gov/cwlinks/norm.daily.aao.cdas.z700.19790101_current.csv",
+  "source_page_url": "https://www.cpc.ncep.noaa.gov/products/precip/CWlink/daily_ao_index/aao/aao.shtml",
+  "methodology_url": "https://www.cpc.ncep.noaa.gov/products/precip/CWlink/daily_ao_index/history/method.shtml",
+  "source_dataset": "CDAS / 700 hPa geopotential height",
+  "source_variable": "aao_index_cdas",
+  "definition": "Daily Antarctic Oscillation index constructed by projecting daily 00Z 700 hPa geopotential height anomalies poleward of 20S onto the leading AAO loading pattern.",
+  "normalization": "Standardized using the standard deviation of the monthly AAO index for the 1979-2000 base period.",
+  "reference_period": "1979-2000",
+  "temporal_resolution": "daily",
+  "units": "dimensionless standardized index",
+  "time_representation": "Each record retains the original calendar day of the NOAA CPC daily AAO product. No temporal aggregation or interpolation is applied.",
+  "first_record": {
+    "date": "1979-01-01",
+    "sam": -1.5563026666641235
+  },
+  "last_record": {
+    "date": "2026-08-17",
+    "sam": 0.13014893974446404
+  },
+  "number_of_records": 17396,
+  "missing_calendar_days": 0,
+  "missing_value_count": 1,
+  "missing_value_dates": [
+    "2003-04-30"
+  ],
+  "retrieved_utc": "2026-08-19T18:03:12.575461+00:00",
+  "source_sha256": "8eed07548abd11c6eab01310716460f83edc9d0f3e6f5dd2134e975f1cfcf55a"
+}
