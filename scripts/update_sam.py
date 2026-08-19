@@ -83,20 +83,18 @@ for row in reader:
         day
     )
 
-     raw_value = row["aao_index_cdas"].strip()
+    raw_value = row["aao_index_cdas"].strip()
 
-     if raw_value == "":
+    if raw_value == "":
         value = None
-     else:
+    else:
         value = float(raw_value)
-    )
 
     records.append({
         "date": date_object.strftime("%Y-%m-%d"),
         "sam": value,
     })
-
-
+    
 # ============================================================
 # 3. Controles básicos
 # ============================================================
