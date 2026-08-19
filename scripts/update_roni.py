@@ -138,6 +138,15 @@ metadata = {
 
     "source_institution": "NOAA Climate Prediction Center",
     "source_url": SOURCE_URL,
+        "source_page_url": (
+        "https://www.cpc.ncep.noaa.gov/products/"
+        "analysis_monitoring/enso/roni/"
+    ),
+
+    "methodology_url": (
+        "https://www.cpc.ncep.noaa.gov/products/"
+        "analysis_monitoring/enso/roni/"
+    ),
     "source_dataset": "ERSSTv6",
 
     "definition": (
@@ -159,7 +168,13 @@ metadata = {
         "The date field represents the first day of the central month "
         "of each 3-month season. NOAA season and year fields are retained."
     ),
-
+    "data_note": (
+        "NOAA CPC indicates that the most recent RONI values "
+        "should be considered estimates because ERSSTv6 values "
+        "may be revised for up to two months after their initial "
+        "real-time publication."
+    ),
+    
     "first_record": records[0],
     "last_record": records[-1],
     "number_of_records": len(records),
