@@ -22,13 +22,20 @@ jobs:
         with:
           python-version: '3.13'
 
-      - name: Run RONI updater
+      - name: Update RONI
         run: python scripts/update_roni.py
+
+      - name: Update SAM
+        run: python scripts/update_sam.py
 
       - name: Inspect generated products
         run: |
-          echo "=== Last rows of RONI CSV ==="
+          echo "=== RONI ==="
           tail -n 5 data/roni.csv
+
+          echo ""
+          echo "=== SAM ==="
+          tail -n 5 data/sam.csv
 
           echo ""
           echo "=== Metadata ==="
@@ -43,9 +50,13 @@ jobs:
           git add data/roni.json
           git add metadata/roni.json
 
+          git add data/sam.csv
+          git add data/sam.json
+          git add metadata/sam.json
+
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "Update RONI data"
+            git commit -m "Update climate index data"
             git push
           fi
