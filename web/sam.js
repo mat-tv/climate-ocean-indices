@@ -137,11 +137,18 @@
         );
 
         const values = records.map(
-            record => Number(record.sam)
+            record =>
+                record.sam === null
+                    ? null
+                    : Number(record.sam)
+        );
+
+        const validRecords = records.filter(
+            record => record.sam !== null
         );
 
         const last =
-            records[records.length - 1];
+            validRecords[validRecords.length - 1];
 
 
         // ====================================================
