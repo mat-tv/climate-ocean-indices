@@ -24,19 +24,22 @@ jobs:
 
       - name: Update RONI
         run: python scripts/update_roni.py
-
       - name: Update SAM
         run: python scripts/update_sam.py
-
+      - name: Update MJO
+        run: python scripts/update_mjo.py
+  
       - name: Inspect generated products
         run: |
           echo "=== RONI ==="
           tail -n 5 data/roni.csv
-
           echo ""
           echo "=== SAM ==="
           tail -n 5 data/sam.csv
-
+          echo ""
+          echo "=== MJO ==="
+          tail -n 5 data/mjo.csv
+          
           echo ""
           echo "=== Metadata ==="
           cat metadata/roni.json
@@ -53,6 +56,10 @@ jobs:
           git add data/sam.csv
           git add data/sam.json
           git add metadata/sam.json
+
+          git add data/mjo.csv
+          git add data/mjo.json
+          git add metadata/mjo.json
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
