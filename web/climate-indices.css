@@ -155,3 +155,34 @@
         height: 430px;
     }
 }
+.climate-index-chart-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.climate-index-chart-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    opacity: 0.65;
+}
+
+.mjo-phase-chart,
+.mjo-amplitude-chart {
+    width: 100%;
+    height: 500px;
+}
+
+@media (max-width: 900px) {
+
+    .climate-index-chart-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mjo-phase-chart,
+    .mjo-amplitude-chart {
+        height: 430px;
+    }
+}
