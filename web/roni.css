@@ -1,0 +1,104 @@
+#climate-roni {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: inherit;
+}
+
+.climate-index-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.climate-index-kicker {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    opacity: 0.65;
+    margin-bottom: 5px;
+}
+
+.climate-index-header h2 {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 1.15;
+}
+
+.climate-index-subtitle {
+    margin-top: 7px;
+    opacity: 0.65;
+}
+
+.climate-index-current {
+    text-align: right;
+    min-width: 150px;
+}
+
+#roni-current-value {
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+#roni-current-period {
+    margin-top: 8px;
+    font-size: 0.95rem;
+    opacity: 0.65;
+}
+
+#roni-chart {
+    width: 100%;
+    height: 520px;
+}
+
+.climate-index-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    border-top: 1px solid rgba(0,0,0,0.12);
+    padding-top: 15px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.climate-index-downloads {
+    display: flex;
+    gap: 15px;
+}
+
+.climate-index-downloads a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#roni-update-info {
+    opacity: 0.65;
+}
+
+#roni-error {
+    margin-top: 15px;
+}
+
+@media (max-width: 700px) {
+
+    .climate-index-header {
+        flex-direction: column;
+    }
+
+    .climate-index-current {
+        text-align: left;
+    }
+
+    .climate-index-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #roni-chart {
+        height: 430px;
+    }
+}
