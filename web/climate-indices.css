@@ -1,0 +1,157 @@
+.climate-index {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: inherit;
+}
+
+.climate-index-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.climate-index-kicker {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    opacity: 0.60;
+    margin-bottom: 5px;
+}
+
+.climate-index-header h2 {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 1.15;
+}
+
+.climate-index-subtitle {
+    margin-top: 7px;
+    opacity: 0.60;
+}
+
+.climate-index-current {
+    text-align: right;
+    min-width: 160px;
+}
+
+.climate-index-current-value {
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.climate-index-current-period {
+    margin-top: 8px;
+    font-size: 0.95rem;
+    opacity: 0.60;
+}
+
+.climate-index-chart {
+    width: 100%;
+    height: 520px;
+}
+
+.climate-index-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    border-top: 1px solid rgba(0,0,0,0.12);
+    padding-top: 15px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.climate-index-update {
+    opacity: 0.60;
+}
+
+.climate-index-downloads {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.climate-index-downloads a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.climate-index-methodology {
+    margin-top: 25px;
+    border-top: 1px solid rgba(0,0,0,0.12);
+    padding-top: 18px;
+}
+
+.climate-index-methodology summary {
+    cursor: pointer;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.climate-index-metadata-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px 30px;
+    margin-top: 18px;
+}
+
+.climate-index-metadata-item span {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.55;
+    margin-bottom: 4px;
+}
+
+.climate-index-note {
+    margin-top: 20px;
+    padding: 15px 18px;
+    background: rgba(0,0,0,0.035);
+    line-height: 1.55;
+}
+
+.climate-index-method-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 18px;
+}
+
+.climate-index-method-links a {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.climate-index-error {
+    margin-top: 15px;
+}
+
+@media (max-width: 700px) {
+
+    .climate-index-header {
+        flex-direction: column;
+    }
+
+    .climate-index-current {
+        text-align: left;
+    }
+
+    .climate-index-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .climate-index-metadata-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .climate-index-chart {
+        height: 430px;
+    }
+}
