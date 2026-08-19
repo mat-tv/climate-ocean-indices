@@ -3,9 +3,8 @@ name: Update climate and ocean indices
 on:
   workflow_dispatch:
 
-  schedule:
-    - cron: '17 5 * * *'
-  #    timezone: "America/Santiago"
+  schedule: # horario en UTC
+    - cron: '17 3 * * *'
 
 permissions:
   contents: write
