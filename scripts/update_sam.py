@@ -94,7 +94,8 @@ for row in reader:
         "date": date_object.strftime("%Y-%m-%d"),
         "sam": value,
     })
-    
+
+
 # ============================================================
 # 3. Controles básicos
 # ============================================================
@@ -288,17 +289,6 @@ metadata = {
         missing_calendar_days
     ),
 
-    "retrieved_utc": (
-        retrieved_utc
-    ),
-
-    "source_sha256": (
-        source_sha256
-    )
-    "missing_calendar_days": (
-    missing_calendar_days
-    ),
-
     "missing_value_count": (
         len(missing_value_records)
     ),
@@ -306,6 +296,14 @@ metadata = {
     "missing_value_dates": (
         missing_value_dates
     ),
+
+    "retrieved_utc": (
+        retrieved_utc
+    ),
+
+    "source_sha256": (
+        source_sha256
+    )
 }
 
 
@@ -333,10 +331,10 @@ with OUTPUT_METADATA.open(
 # ============================================================
 
 print("SAM update completed")
-print(f"Records:       {len(records)}")
-print(f"First record:  {records[0]}")
-print(f"Last record:   {records[-1]}")
-print(f"Missing days:  {missing_calendar_days}")
-print(f"Missing values:{len(missing_value_records)}")
-print(f"Missing dates: {missing_value_dates}")
-print(f"Source SHA256: {source_sha256}")
+print(f"Records:        {len(records)}")
+print(f"First record:   {records[0]}")
+print(f"Last record:    {records[-1]}")
+print(f"Missing days:   {missing_calendar_days}")
+print(f"Missing values: {len(missing_value_records)}")
+print(f"Missing dates:  {missing_value_dates}")
+print(f"Source SHA256:  {source_sha256}")
