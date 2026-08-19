@@ -1,0 +1,30 @@
+{
+  "id": "roni",
+  "name": "Relative Oceanic Niño Index",
+  "short_name": "RONI",
+  "source_institution": "NOAA Climate Prediction Center",
+  "source_url": "https://www.cpc.ncep.noaa.gov/data/indices/RONI.ascii.txt",
+  "source_dataset": "ERSSTv6",
+  "definition": "Three-month running mean of the relative Niño 3.4 index. NOAA CPC computes the relative Niño 3.4 anomaly by subtracting the tropical-mean SST anomaly (20N-20S) from the Niño 3.4 SST anomaly and adjusting the resulting series so that its variance equals that of the original Niño 3.4 index.",
+  "region_nino34": "5N-5S, 170W-120W",
+  "tropical_reference_region": "20N-20S",
+  "reference_period": "1991-2020",
+  "temporal_resolution": "overlapping 3-month seasons",
+  "units": "degC",
+  "time_representation": "The date field represents the first day of the central month of each 3-month season. NOAA season and year fields are retained.",
+  "first_record": {
+    "date": "1950-01-01",
+    "season": "DJF",
+    "year": 1950,
+    "roni": -1.19
+  },
+  "last_record": {
+    "date": "2026-06-01",
+    "season": "MJJ",
+    "year": 2026,
+    "roni": 0.98
+  },
+  "number_of_records": 918,
+  "retrieved_utc": "2026-08-19T16:19:02.565096+00:00",
+  "source_sha256": "3292d9f2597ee6d7fea3b76584d2357786fcd8e472f04a2e6765a3802600264d"
+}
