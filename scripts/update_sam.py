@@ -83,8 +83,12 @@ for row in reader:
         day
     )
 
-    value = float(
-        row["aao_index_cdas"]
+     raw_value = row["aao_index_cdas"].strip()
+
+     if raw_value == "":
+        value = None
+     else:
+        value = float(raw_value)
     )
 
     records.append({
@@ -133,6 +137,18 @@ for previous, current in zip(
         missing_calendar_days += (
             delta_days - 1
         )
+
+
+missing_value_records = [
+    record
+    for record in records
+    if record["sam"] is None
+]
+
+missing_value_dates = [
+    record["date"]
+    for record in missing_value_records
+]
 
 
 # ============================================================
@@ -281,6 +297,17 @@ metadata = {
     "source_sha256": (
         source_sha256
     )
+    "missing_calendar_days": (
+    missing_calendar_days
+    ),
+
+    "missing_value_count": (
+        len(missing_value_records)
+    ),
+
+    "missing_value_dates": (
+        missing_value_dates
+    ),
 }
 
 
@@ -308,12 +335,10 @@ with OUTPUT_METADATA.open(
 # ============================================================
 
 print("SAM update completed")
-print(f"Records:      {len(records)}")
-print(f"First record: {records[0]}")
-print(f"Last record:  {records[-1]}")
-print(
-    f"Missing days: {missing_calendar_days}"
-)
-print(
-    f"Source SHA256: {source_sha256}"
-)
+print(f"Records:       {len(records)}")
+print(f"First record:  {records[0]}")
+print(f"Last record:   {records[-1]}")
+print(f"Missing days:  {missing_calendar_days}")
+print(f"Missing values:{len(missing_value_records)}")
+print(f"Missing dates: {missing_value_dates}")
+print(f"Source SHA256: {source_sha256}")
