@@ -28,6 +28,9 @@ jobs:
         run: python scripts/update_sam.py
       - name: Update MJO
         run: python scripts/update_mjo.py
+      - name: Update PDO
+        run: python scripts/update_pdo.py
+
   
       - name: Inspect generated products
         run: |
@@ -39,7 +42,10 @@ jobs:
           echo ""
           echo "=== MJO ==="
           tail -n 5 data/mjo.csv
-          
+          echo ""
+          echo "=== PDO ==="
+          tail -n 10 data/pdo.csv
+
           echo ""
           echo "=== Metadata ==="
           cat metadata/roni.json
@@ -60,6 +66,10 @@ jobs:
           git add data/mjo.csv
           git add data/mjo.json
           git add metadata/mjo.json
+
+          git add data/pdo.csv
+          git add data/pdo.json
+          git add metadata/pdo.json
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
