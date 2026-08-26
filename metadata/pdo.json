@@ -1,0 +1,67 @@
+{
+  "id": "pdo",
+  "name": "Pacific Decadal Oscillation",
+  "short_name": "PDO",
+  "source_institution": "NOAA Physical Sciences Laboratory",
+  "source_url": "https://psl.noaa.gov/pdo/data/pdo.timeseries.sstens.data",
+  "source_page_url": "https://psl.noaa.gov/data/timeseries/month/PDO/",
+  "format_url": "https://psl.noaa.gov/data/timeseries/month/standard/",
+  "methodology_url": "https://doi.org/10.1175/JCLI-D-15-0508.1",
+  "usage_url": "https://www.psl.noaa.gov/disclaimer/",
+  "source_product": "Ensemble mean PDO",
+  "definition": "Leading EOF of monthly sea-surface-temperature anomalies in the North Pacific between 20N and 70N. NOAA PSL removes the monthly SST climatology and the global-mean SST anomaly before calculating the PDO.",
+  "reference_period": "1920-2014 EOF/climatology period, as documented by NOAA PSL",
+  "temporal_resolution": "monthly",
+  "units": "degC, as documented by NOAA PSL",
+  "time_representation": "Each monthly value is represented by the first day of its calendar month. No temporal interpolation, smoothing or aggregation is applied by this portal.",
+  "source_file_start_year": 1870,
+  "source_file_end_year": 2026,
+  "first_record": {
+    "date": "1870-01-01",
+    "year": 1870,
+    "month": 1,
+    "pdo": 0.366
+  },
+  "first_valid_record": {
+    "date": "1870-01-01",
+    "year": 1870,
+    "month": 1,
+    "pdo": 0.366
+  },
+  "last_valid_record": {
+    "date": "2026-06-01",
+    "year": 2026,
+    "month": 6,
+    "pdo": -1.608
+  },
+  "number_of_records": 1884,
+  "number_of_valid_records": 1878,
+  "missing_value_sentinel": -9999.0,
+  "missing_value_count": 6,
+  "missing_value_dates": [
+    "2026-07-01",
+    "2026-08-01",
+    "2026-09-01",
+    "2026-10-01",
+    "2026-11-01",
+    "2026-12-01"
+  ],
+  "source_notes": [
+    "PDO from Ensemble SST",
+    "https://psl.noaa.gov//pdo/",
+    "Using EOF from 1920 to 2014 for N Pacific (see webpage)",
+    "Date produced Aug 25 2026",
+    "SST interpolated to a 2x2 grid",
+    "Datasets used COBE2-SST HADISST1.1 NOAA ERSSTV6"
+  ],
+  "documentation_note": "The NOAA PSL PDO webpage currently states monthly coverage from 1891/01 to present, while the machine-readable standard file currently begins in 1870. This portal preserves the machine-readable source file exactly and records this documentation discrepancy explicitly.",
+  "usage": {
+    "status": "U.S. government information; public domain unless specifically annotated otherwise",
+    "redistribution": true,
+    "attribution": "Data provided by the NOAA Physical Sciences Laboratory, Boulder, Colorado, USA.",
+    "usage_url": "https://www.psl.noaa.gov/disclaimer/"
+  },
+  "citation": "Newman, M., Alexander, M. A., Ault, T. R., Cobb, K. M., Deser, C., Di Lorenzo, E., Mantua, N., Miller, A. J., Minobe, S., Nakamura, H., Schneider, N., Vimont, D. J., Phillips, A. S., Scott, J. D., and Smith, C. A. (2016): The Pacific Decadal Oscillation, Revisited. Journal of Climate, 29, 4399-4427.",
+  "retrieved_utc": "2026-08-26T17:17:39.876256+00:00",
+  "source_sha256": "d24aab8788a8e5c7282fa5b33cd5755810286ef4c627e9e73cd81f07de7c3433"
+}
