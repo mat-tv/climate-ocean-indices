@@ -50,7 +50,7 @@
     "PDO from Ensemble SST",
     "https://psl.noaa.gov//pdo/",
     "Using EOF from 1920 to 2014 for N Pacific (see webpage)",
-    "Date produced Aug 26 2026",
+    "Date produced Aug 27 2026",
     "SST interpolated to a 2x2 grid",
     "Datasets used COBE2-SST HADISST1.1 NOAA ERSSTV6"
   ],
@@ -62,6 +62,6 @@
     "usage_url": "https://www.psl.noaa.gov/disclaimer/"
   },
   "citation": "Newman, M., Alexander, M. A., Ault, T. R., Cobb, K. M., Deser, C., Di Lorenzo, E., Mantua, N., Miller, A. J., Minobe, S., Nakamura, H., Schneider, N., Vimont, D. J., Phillips, A. S., Scott, J. D., and Smith, C. A. (2016): The Pacific Decadal Oscillation, Revisited. Journal of Climate, 29, 4399-4427.",
-  "retrieved_utc": "2026-08-27T14:16:44.510517+00:00",
-  "source_sha256": "2043659f04a88c0a882190217fea60d9cfd7728950184fdb394719af0109d77a"
+  "retrieved_utc": "2026-08-28T15:26:46.226940+00:00",
+  "source_sha256": "bce8d5b3b283cb5f9d769ba4afb5b9f477a74c770cbc4db4d3a5b81e2fff43cd"
 }
