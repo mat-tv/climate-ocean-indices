@@ -22,12 +22,12 @@
     "roni": -1.19
   },
   "last_record": {
-    "date": "2026-06-01",
-    "season": "MJJ",
+    "date": "2026-07-01",
+    "season": "JJA",
     "year": 2026,
-    "roni": 0.98
+    "roni": 1.36
   },
-  "number_of_records": 918,
-  "retrieved_utc": "2026-09-03T08:06:39.704494+00:00",
-  "source_sha256": "3292d9f2597ee6d7fea3b76584d2357786fcd8e472f04a2e6765a3802600264d"
+  "number_of_records": 919,
+  "retrieved_utc": "2026-09-04T08:01:49.248986+00:00",
+  "source_sha256": "2f1c446b0c293358af6452808799b0dca75f89b0a1d6f86eb1887dc3de9b5eae"
 }
