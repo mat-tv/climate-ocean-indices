@@ -30,6 +30,8 @@ jobs:
         run: python scripts/update_mjo.py
       - name: Update PDO
         run: python scripts/update_pdo.py
+      - name: Update additional indices
+        run: python scripts/update_additional_indices.py
 
   
       - name: Inspect generated products
@@ -45,6 +47,13 @@ jobs:
           echo ""
           echo "=== PDO ==="
           tail -n 10 data/pdo.csv
+
+          echo ""
+          echo "=== Additional indices ==="
+          for index in nino soi mei tpi pmm dmi qbo sea_ice amo nao; do
+            echo "--- $index ---"
+            tail -n 3 "data/$index.csv"
+          done
 
           echo ""
           echo "=== Metadata ==="
@@ -70,6 +79,17 @@ jobs:
           git add data/pdo.csv
           git add data/pdo.json
           git add metadata/pdo.json
+
+          git add data/nino.csv data/nino.json metadata/nino.json
+          git add data/soi.csv data/soi.json metadata/soi.json
+          git add data/mei.csv data/mei.json metadata/mei.json
+          git add data/tpi.csv data/tpi.json metadata/tpi.json
+          git add data/pmm.csv data/pmm.json metadata/pmm.json
+          git add data/dmi.csv data/dmi.json metadata/dmi.json
+          git add data/qbo.csv data/qbo.json metadata/qbo.json
+          git add data/sea_ice.csv data/sea_ice.json metadata/sea_ice.json
+          git add data/amo.csv data/amo.json metadata/amo.json
+          git add data/nao.csv data/nao.json metadata/nao.json
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
