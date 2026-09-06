@@ -21,6 +21,9 @@
         dashboard.dataset.assetBaseUrl || dataBaseUrl
     ).replace(/\/+$/, "");
     const assetVersion = dashboard.dataset.assetVersion || "";
+    const projectCreator = dashboard.dataset.projectCreator || "MTroncoso-Villar";
+    const projectYear = dashboard.dataset.projectYear || "2026";
+    const portalTitle = "Portal de Índices Climáticos y Oceanográficos";
 
     const indexViews = {
         roni: {
@@ -84,6 +87,15 @@
     const scriptPromises = new Map();
     const dataPromises = new Map();
     let activeView = "overview";
+
+    function escapeHtml(value) {
+        return String(value)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
 
     function buildUrl(base, path) {
         const cleanPath = String(path).replace(/^\/+/, "");
@@ -240,6 +252,25 @@
                     científico. Las fuentes, unidades y frecuencias originales
                     se conservan en los metadatos de cada producto.
                 </div>
+
+                <div class="climate-dashboard-credits">
+                    <p>
+                        <strong>Créditos del proyecto.</strong>
+                        Concepto, dirección y desarrollo del portal:
+                        ${escapeHtml(projectCreator)}.
+                    </p>
+                    <p>
+                        Se agradece al Departamento de Ingeniería Hidráulica y
+                        Ambiental (DIHA) de la Pontificia Universidad Católica de Chile
+                        por su disposición a apoyar y alojar esta iniciativa.
+                    </p>
+                    <p class="climate-dashboard-copyright">
+                        © ${escapeHtml(projectYear)} ${escapeHtml(projectCreator)} ·
+                        Interfaz, integración y visualizaciones del portal.
+                        Los datos científicos conservan la autoría y las condiciones
+                        de uso de las fuentes institucionales indicadas en cada índice.
+                    </p>
+                </div>
             </div>
         `;
     }
@@ -252,6 +283,77 @@
         const pane = createPane("overview");
         pane.innerHTML = overviewMarkup();
         return pane;
+    }
+
+    function prepareCsvDownloads(indexRoot, view) {
+        const links = Array.from(
+            indexRoot.querySelectorAll(".climate-index-downloads a")
+        );
+        const csvLink = links.find(link =>
+            new URL(link.href, window.location.href).pathname.endsWith(".csv")
+        );
+
+        if (!csvLink || csvLink.dataset.climateCsvDownload) {
+            return;
+        }
+
+        const cleanLink = csvLink.cloneNode(true);
+        cleanLink.textContent = "CSV limpio";
+        cleanLink.title = "Archivo canónico sin líneas adicionales";
+
+        csvLink.textContent = "CSV con referencia";
+        csvLink.title =
+            "Incluye dos líneas iniciales de procedencia, marcadas con #";
+        csvLink.dataset.climateCsvDownload = view;
+        csvLink.removeAttribute("target");
+        csvLink.after(cleanLink);
+    }
+
+    async function downloadDocumentedCsv(link) {
+        const previousText = link.textContent;
+        link.textContent = "Preparando…";
+        link.setAttribute("aria-busy", "true");
+
+        try {
+            const response = await fetch(link.href);
+
+            if (!response.ok) {
+                throw new Error("No se pudo preparar el CSV documentado");
+            }
+
+            const originalCsv = await response.text();
+            const portalUrl = `${window.location.origin}${window.location.pathname}`;
+            const reference = [
+                `# Descargado desde: ${portalUrl}`,
+                `# ${portalTitle} — © ${projectYear} ${projectCreator}`
+            ].join("\r\n");
+            const documentedCsv = `${reference}\r\n${originalCsv}`;
+            const blob = new Blob([documentedCsv], {
+                type: "text/csv;charset=utf-8"
+            });
+            const objectUrl = URL.createObjectURL(blob);
+            const download = document.createElement("a");
+            const sourceName = new URL(link.href).pathname.split("/").pop();
+            const downloadName = sourceName.replace(/\.csv$/i, "_portal.csv");
+
+            download.href = objectUrl;
+            download.download = downloadName;
+            document.body.appendChild(download);
+            download.click();
+            download.remove();
+            window.setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
+        } catch (error) {
+            console.error(error);
+            link.textContent = "Use CSV limpio";
+            window.setTimeout(() => {
+                link.textContent = previousText;
+            }, 2500);
+        } finally {
+            link.removeAttribute("aria-busy");
+            if (link.textContent === "Preparando…") {
+                link.textContent = previousText;
+            }
+        }
     }
 
     async function ensureIndexView(view) {
@@ -278,6 +380,7 @@
         try {
             pane.replaceChildren(indexRoot);
             await loadScript(config.script);
+            prepareCsvDownloads(indexRoot, view);
             pane.removeAttribute("aria-busy");
         } catch (error) {
             console.error(error);
@@ -461,7 +564,7 @@
             });
 
             const layout = {
-                margin: {l: 60, r: 25, t: 25, b: 55},
+                margin: {l: 60, r: 25, t: 25, b: 72},
                 hovermode: "x unified",
                 xaxis: {type: "date", showgrid: true, zeroline: false},
                 yaxis: {
@@ -474,6 +577,21 @@
                     zeroline: true
                 },
                 legend: {orientation: "h", x: 0, y: 1.12},
+                annotations: [{
+                    text:
+                        `© ${escapeHtml(projectYear)} ${escapeHtml(projectCreator)} · ` +
+                        "Visualización del portal · Datos: fuentes indicadas",
+                    xref: "paper",
+                    yref: "paper",
+                    x: 0,
+                    y: 0,
+                    xanchor: "left",
+                    yanchor: "top",
+                    yshift: -48,
+                    showarrow: false,
+                    font: {size: 9},
+                    opacity: 0.62
+                }],
                 paper_bgcolor: "rgba(0,0,0,0)",
                 plot_bgcolor: "rgba(0,0,0,0)"
             };
@@ -492,7 +610,7 @@
 
             method.innerHTML = mode === "standardized"
                 ? "<strong>Estandarización.</strong> Para cada serie se calcula " +
-                  "z = (x − media) / desviación estándar usando solamente sus " +
+                  "[z = (x − media) / desviación estándar] usando solamente sus " +
                   "observaciones válidas dentro del intervalo mostrado. No se " +
                   "interpolan ni sincronizan frecuencias."
                 : "<strong>Valores originales.</strong> Cada serie conserva sus " +
@@ -563,6 +681,24 @@
     });
 
     content.addEventListener("click", event => {
+        const csvDownload = event.target.closest("[data-climate-csv-download]");
+
+        if (csvDownload) {
+            if (
+                event.button !== 0 ||
+                event.ctrlKey ||
+                event.metaKey ||
+                event.shiftKey ||
+                event.altKey
+            ) {
+                return;
+            }
+
+            event.preventDefault();
+            downloadDocumentedCsv(csvDownload);
+            return;
+        }
+
         const trigger = event.target.closest("[data-open-view]");
         if (trigger) {
             openView(trigger.dataset.openView, false);

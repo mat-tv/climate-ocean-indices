@@ -10,6 +10,25 @@
     const metadataUrl = root.dataset.metadataUrl;
     const csvUrl = root.dataset.csvUrl;
     const jsonUrl = root.dataset.jsonUrl;
+    const dashboard = root.closest("#climate-dashboard");
+    const projectCreator =
+        dashboard?.dataset.projectCreator || "MTroncoso-Villar";
+    const projectYear = dashboard?.dataset.projectYear || "2026";
+    const plotCredit = {
+        text:
+            `© ${projectYear} ${projectCreator} · Visualización del portal · ` +
+            "Datos: NOAA Climate Prediction Center",
+        xref: "paper",
+        yref: "paper",
+        x: 0,
+        y: 0,
+        xanchor: "left",
+        yanchor: "top",
+        yshift: -48,
+        showarrow: false,
+        font: {size: 9},
+        opacity: 0.62
+    };
 
     root.classList.add("climate-index");
 
@@ -237,7 +256,7 @@
                 l: 60,
                 r: 25,
                 t: 30,
-                b: 50
+                b: 72
             },
 
             hovermode: "x unified",
@@ -316,6 +335,8 @@
                     }
                 }
             ],
+
+            annotations: [plotCredit],
 
             showlegend: false,
 
