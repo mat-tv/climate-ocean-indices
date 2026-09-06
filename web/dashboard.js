@@ -23,7 +23,6 @@
     const assetVersion = dashboard.dataset.assetVersion || "";
     const projectCreator = dashboard.dataset.projectCreator || "MTroncoso-Villar";
     const projectYear = dashboard.dataset.projectYear || "2026";
-    const portalTitle = "Portal de Índices Climáticos y Oceanográficos";
 
     const indexViews = {
         roni: {
@@ -361,6 +360,13 @@
             .replace(/'/g, "&#039;");
     }
 
+    function asciiText(value) {
+        return String(value)
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/[^\x20-\x7E]/g, "");
+    }
+
     function buildUrl(base, path) {
         const cleanPath = String(path).replace(/^\/+/, "");
         return `${base}/${cleanPath}`;
@@ -652,11 +658,11 @@
             const portalUrl = `${window.location.origin}${window.location.pathname}`;
             const sourceName = new URL(link.href).pathname.split("/").pop();
             const reference = [
-                `# Descargado desde: ${portalUrl}`,
-                `# ${portalTitle} · © ${projectYear} ${projectCreator}`
+                `# Downloaded from: ${asciiText(portalUrl)}`,
+                `# Climate and Ocean Indices Portal | © ${asciiText(projectYear)} ${asciiText(projectCreator)}`
             ].join("\r\n");
             const documentedCsv = `${reference}\r\n${originalCsv}`;
-            const blob = new Blob([documentedCsv], {
+            const blob = new Blob(["\uFEFF", documentedCsv], {
                 type: "text/csv;charset=utf-8"
             });
             const objectUrl = URL.createObjectURL(blob);
