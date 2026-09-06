@@ -624,7 +624,7 @@
                 annotations: [{
                     text:
                         `© ${escapeHtml(projectYear)} ${escapeHtml(projectCreator)} · ` +
-                        "Visualización del portal · Datos: fuentes indicadas",
+                        " Datos: fuentes indicadas",
                     xref: "paper",
                     yref: "paper",
                     x: 0,
