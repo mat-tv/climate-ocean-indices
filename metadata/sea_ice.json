@@ -1,0 +1,51 @@
+{
+  "id": "sea_ice",
+  "name": "Antarctic sea-ice extent",
+  "short_name": "Antarctic sea ice",
+  "source_institution": "National Snow and Ice Data Center",
+  "source_dataset": "Sea Ice Index, Version 4 — Southern Hemisphere daily extent",
+  "source_url": [
+    "https://noaadata.apps.nsidc.org/NOAA/G02135/south/daily/data/S_seaice_extent_daily_v4.0.csv",
+    "https://noaadata.apps.nsidc.org/NOAA/G02135/south/daily/data/S_seaice_extent_climatology_1981-2010_v4.0.csv"
+  ],
+  "source_page_url": "https://nsidc.org/data/g02135/versions/4",
+  "methodology_url": "https://nsidc.org/sites/default/files/g02135-v004-userguide_1_1.pdf",
+  "definition": "Daily Southern Hemisphere sea-ice extent. The portal also computes a calendar-day anomaly from the official NSIDC 1981–2010 daily climatology.",
+  "reference_period": "NSIDC 1981–2010 daily climatology",
+  "temporal_resolution": "daily",
+  "units": "million km2",
+  "time_representation": "Each observation retains its UTC calendar date from the NSIDC file.",
+  "data_note": "Extent and climatology are preserved from NSIDC. Anomaly is their difference, rounded to 0.001 million km²; no gap filling is applied.",
+  "value_keys": [
+    "extent",
+    "anomaly"
+  ],
+  "derived_fields": {
+    "anomaly": "extent minus the official NSIDC 1981–2010 average for the same calendar month and day"
+  },
+  "citation": "Fetterer, F., Knowles, K., Meier, W. N., Savoie, M., Windnagel, A. K. and Stafford, T. (2025): Sea Ice Index, Version 4 (G02135). National Snow and Ice Data Center. https://doi.org/10.7265/a98x-0f50.",
+  "first_record": {
+    "date": "1978-10-26",
+    "year": 1978,
+    "month": 10,
+    "day": 26,
+    "extent": 17.624,
+    "climatology_1981_2010": 17.681,
+    "anomaly": -0.057
+  },
+  "last_record": {
+    "date": "2026-09-04",
+    "year": 2026,
+    "month": 9,
+    "day": 4,
+    "extent": 17.363,
+    "climatology_1981_2010": 18.352,
+    "anomaly": -0.989
+  },
+  "number_of_records": 15830,
+  "retrieved_utc": "2026-09-06T07:14:39.220462+00:00",
+  "source_sha256": {
+    "sea_ice": "b13b429dbd59bba317d071708a71f67e80fb4882e50aeaf1debff939c60eeab3",
+    "sea_ice_climatology": "18c8e6285ac3805277664ea89acec65e09b8bc6826acdb7dbe5ee2ef3ac5eb41"
+  }
+}

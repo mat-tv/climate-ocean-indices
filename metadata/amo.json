@@ -1,0 +1,35 @@
+{
+  "id": "amo",
+  "name": "Atlantic Multidecadal Oscillation / Variability",
+  "short_name": "AMV / AMO",
+  "source_institution": "NOAA National Centers for Environmental Information",
+  "source_dataset": "ERSSTv5 North Atlantic 0–60°N SST anomaly index",
+  "source_url": "https://www.ncei.noaa.gov/pub/data/cmb/ersst/v5/index/ersst.v5.amo.dat",
+  "source_page_url": "https://www.ncei.noaa.gov/products/extended-reconstructed-sst",
+  "methodology_url": "https://doi.org/10.1175/JCLI-D-16-0836.1",
+  "definition": "Monthly ERSSTv5 sea-surface-temperature anomaly averaged over the North Atlantic from the equator to 60°N.",
+  "reference_period": "1971–2000 ERSSTv5 climatology",
+  "temporal_resolution": "monthly",
+  "units": "degC",
+  "time_representation": "Each value is represented by the first day of its calendar month.",
+  "data_note": "This is the raw monthly NOAA NCEI series. The portal does not detrend or apply a multiyear low-pass filter, so AMV/AMO interpretations should account for that distinction.",
+  "citation": "Huang, B. et al. (2017): Extended Reconstructed Sea Surface Temperature, Version 5 (ERSSTv5). Journal of Climate, 30, 8179–8205.",
+  "value_keys": [
+    "amo"
+  ],
+  "first_record": {
+    "date": "1854-01-01",
+    "year": 1854,
+    "month": 1,
+    "amo": 0.28
+  },
+  "last_record": {
+    "date": "2026-08-01",
+    "year": 2026,
+    "month": 8,
+    "amo": 1.18
+  },
+  "number_of_records": 2072,
+  "retrieved_utc": "2026-09-06T07:14:39.220462+00:00",
+  "source_sha256": "c1c70b977a526f7a9d26849c38348143b323a27f2b185419061a288409545ada"
+}

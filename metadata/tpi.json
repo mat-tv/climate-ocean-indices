@@ -1,0 +1,35 @@
+{
+  "id": "tpi",
+  "name": "Tripole Index / Interdecadal Pacific Oscillation",
+  "short_name": "TPI / IPO",
+  "source_institution": "NOAA Physical Sciences Laboratory",
+  "source_dataset": "ERSSTv5 Tripole Index",
+  "source_url": "https://psl.noaa.gov/data/timeseries/IPOTPI/tpi.timeseries.ersstv5.data",
+  "source_page_url": "https://psl.noaa.gov/data/timeseries/IPOTPI/",
+  "methodology_url": "https://psl.noaa.gov/data/timeseries/IPOTPI/",
+  "definition": "Difference between central equatorial Pacific SST anomalies and the mean of northwest and southwest Pacific SST anomalies; a monthly index associated with the IPO pattern.",
+  "reference_period": "Climatology used in the ERSSTv5 source product",
+  "temporal_resolution": "monthly",
+  "units": "degC",
+  "time_representation": "Each value is represented by the first day of its calendar month.",
+  "data_note": "This portal displays the unsmoothed monthly TPI. Decadal smoothing is not applied.",
+  "citation": "Henley, B. J. et al. (2015): A Tripole Index for the Interdecadal Pacific Oscillation. Climate Dynamics, 45, 3077–3090.",
+  "value_keys": [
+    "tpi"
+  ],
+  "first_record": {
+    "date": "1854-01-01",
+    "year": 1854,
+    "month": 1,
+    "tpi": 0.356
+  },
+  "last_record": {
+    "date": "2026-08-01",
+    "year": 2026,
+    "month": 8,
+    "tpi": 1.088
+  },
+  "number_of_records": 2072,
+  "retrieved_utc": "2026-09-06T07:14:39.220462+00:00",
+  "source_sha256": "dd0e8b454fbe91ce598538182a0af5e0f55f82ad2fb53e961437e89a6d449cf8"
+}

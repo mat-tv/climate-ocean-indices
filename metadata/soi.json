@@ -1,0 +1,34 @@
+{
+  "id": "soi",
+  "name": "Southern Oscillation Index",
+  "short_name": "SOI",
+  "source_institution": "NOAA Climate Prediction Center",
+  "source_dataset": "Standardized Tahiti minus Darwin sea-level-pressure index",
+  "source_url": "https://www.cpc.ncep.noaa.gov/data/indices/soi",
+  "source_page_url": "https://www.cpc.ncep.noaa.gov/data/indices/",
+  "methodology_url": "https://www.cpc.ncep.noaa.gov/data/indices/Readme.index.shtml",
+  "definition": "Standardized difference between sea-level-pressure anomalies at Tahiti and Darwin, used to monitor the atmospheric component of ENSO.",
+  "reference_period": "Source standardization as published by NOAA CPC",
+  "temporal_resolution": "monthly",
+  "units": "standardized index",
+  "time_representation": "Each value is represented by the first day of its calendar month.",
+  "data_note": "The STANDARDIZED DATA table is used; the preceding pressure-anomaly table is not mixed with this series.",
+  "value_keys": [
+    "soi"
+  ],
+  "first_record": {
+    "date": "1951-01-01",
+    "year": 1951,
+    "month": 1,
+    "soi": 1.5
+  },
+  "last_record": {
+    "date": "2026-08-01",
+    "year": 2026,
+    "month": 8,
+    "soi": -1.1
+  },
+  "number_of_records": 908,
+  "retrieved_utc": "2026-09-06T07:14:39.220462+00:00",
+  "source_sha256": "2c63ea03b7b708513bdc217d451d6757cd08a75bcbfd32f89a1fa6b739a704e9"
+}

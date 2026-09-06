@@ -1,0 +1,37 @@
+{
+  "id": "mei",
+  "name": "Multivariate ENSO Index Version 2",
+  "short_name": "MEI.v2",
+  "source_institution": "NOAA Physical Sciences Laboratory",
+  "source_dataset": "Multivariate ENSO Index Version 2",
+  "source_url": "https://psl.noaa.gov/enso/mei/data/meiv2.data",
+  "source_page_url": "https://psl.noaa.gov/enso/mei/",
+  "methodology_url": "https://psl.noaa.gov/enso/mei/",
+  "definition": "A multivariate ENSO index based on five tropical Pacific fields: sea-level pressure, sea-surface temperature, zonal and meridional surface winds, and outgoing longwave radiation.",
+  "reference_period": "1980–2018 seasonal climatology and standardization, per NOAA PSL documentation",
+  "temporal_resolution": "overlapping bimonthly seasons",
+  "units": "standardized index",
+  "time_representation": "DJ is assigned to January, JF to February, and so on through ND in December of the row year.",
+  "data_note": "Values are retained exactly as published; no interpolation is applied to unavailable seasons.",
+  "citation": "Wolter, K. and Timlin, M. S. (2011): El Niño/Southern Oscillation behaviour since 1871 as diagnosed in an extended multivariate ENSO index. International Journal of Climatology, 31, 1074–1087.",
+  "value_keys": [
+    "mei"
+  ],
+  "first_record": {
+    "date": "1979-01-01",
+    "year": 1979,
+    "month": 1,
+    "season": "DJ",
+    "mei": 0.46
+  },
+  "last_record": {
+    "date": "2026-07-01",
+    "year": 2026,
+    "month": 7,
+    "season": "JJ",
+    "mei": 2.41
+  },
+  "number_of_records": 571,
+  "retrieved_utc": "2026-09-06T07:14:39.220462+00:00",
+  "source_sha256": "4877bb4e0e304fc6377ec5246d4c10654b7c7df5ba81480c9c677fcb762a2654"
+}

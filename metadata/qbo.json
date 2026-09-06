@@ -1,0 +1,43 @@
+{
+  "id": "qbo",
+  "name": "Quasi-Biennial Oscillation zonal-wind indices",
+  "short_name": "QBO 30 / 50 hPa",
+  "source_institution": "NOAA Climate Prediction Center",
+  "source_dataset": "CDAS equatorial zonal-wind indices at 30 and 50 mb",
+  "source_url": [
+    "https://www.cpc.ncep.noaa.gov/data/indices/qbo.u30.index",
+    "https://www.cpc.ncep.noaa.gov/data/indices/qbo.u50.index"
+  ],
+  "source_page_url": "https://www.cpc.ncep.noaa.gov/data/indices/",
+  "methodology_url": "https://www.cpc.ncep.noaa.gov/data/indices/Readme.index.shtml",
+  "definition": "Monthly equatorial stratospheric zonal-wind indices at 30 and 50 hPa. Positive values indicate westerly flow and negative values easterly flow.",
+  "reference_period": "Original wind values; not standardized by this portal",
+  "temporal_resolution": "monthly",
+  "units": "m s-1",
+  "time_representation": "Each value is represented by the first day of its calendar month.",
+  "data_note": "The ORIGINAL DATA tables are used at both pressure levels; anomaly and standardized tables in the source files are not mixed in.",
+  "value_keys": [
+    "qbo_30",
+    "qbo_50"
+  ],
+  "first_record": {
+    "date": "1979-01-01",
+    "year": 1979,
+    "month": 1,
+    "qbo_30": 1.85,
+    "qbo_50": 7.38
+  },
+  "last_record": {
+    "date": "2026-08-01",
+    "year": 2026,
+    "month": 8,
+    "qbo_30": 11.27,
+    "qbo_50": -0.32
+  },
+  "number_of_records": 572,
+  "retrieved_utc": "2026-09-06T07:14:39.220462+00:00",
+  "source_sha256": {
+    "qbo_30": "c05beb569aad871f93bc1e571611b9f726d0214954c70fd172d5c393abeb6c93",
+    "qbo_50": "b3f919632c1fe676ec4632f85ab9e886aecc27f1a108a23e337c763b90cd4879"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "nino",
+  "name": "Niño sea-surface-temperature regions",
+  "short_name": "Niño 1+2 / 3 / 3.4 / 4",
+  "source_institution": "NOAA Climate Prediction Center",
+  "source_dataset": "ERSSTv5 Niño monthly indices, 1991–2020 climatology",
+  "source_url": "https://www.cpc.ncep.noaa.gov/data/indices/ersst5.nino.mth.91-20.ascii",
+  "source_page_url": "https://www.cpc.ncep.noaa.gov/data/indices/",
+  "methodology_url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/ensostuff/ONI_change.shtml",
+  "definition": "Monthly sea-surface-temperature anomalies for the Niño 1+2, Niño 3, Niño 3.4 and Niño 4 monitoring regions of the tropical Pacific.",
+  "reference_period": "1991–2020 monthly climatology",
+  "temporal_resolution": "monthly",
+  "units": "degC",
+  "time_representation": "Each value is represented by the first day of its calendar month; no smoothing or interpolation is applied.",
+  "data_note": "The portal retains the anomaly columns published by NOAA CPC and does not reproduce the absolute SST columns.",
+  "citation": "Huang, B. et al. (2017): Extended Reconstructed Sea Surface Temperature, Version 5 (ERSSTv5). Journal of Climate, 30, 8179–8205.",
+  "value_keys": [
+    "nino_1_2",
+    "nino_3",
+    "nino_3_4",
+    "nino_4"
+  ],
+  "first_record": {
+    "date": "1950-01-01",
+    "year": 1950,
+    "month": 1,
+    "nino_1_2": -1.55,
+    "nino_3": -2.1,
+    "nino_3_4": -1.99,
+    "nino_4": -1.38
+  },
+  "last_record": {
+    "date": "2026-06-01",
+    "year": 2026,
+    "month": 6,
+    "nino_1_2": 2.82,
+    "nino_3": 1.71,
+    "nino_3_4": 1.44,
+    "nino_4": 1.22
+  },
+  "number_of_records": 918,
+  "retrieved_utc": "2026-09-06T07:14:39.220462+00:00",
+  "source_sha256": "bedcd0683c07f7ccb2ae358a90cb39d57413dcc8881027e0c30a1811f6d58012"
+}

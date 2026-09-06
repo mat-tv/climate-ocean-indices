@@ -1,0 +1,35 @@
+{
+  "id": "pmm",
+  "name": "Pacific Meridional Mode — SST component",
+  "short_name": "PMM",
+  "source_institution": "NOAA Physical Sciences Laboratory",
+  "source_dataset": "Monthly SST PMM index derived from NCEP/NCAR Reanalysis",
+  "source_url": "https://psl.noaa.gov/data/timeseries/month/data/pmm.csv",
+  "source_page_url": "https://psl.noaa.gov/data/timeseries/month/PMM/",
+  "methodology_url": "https://doi.org/10.1175/JCLI-D-16-0543.1",
+  "definition": "Monthly sea-surface-temperature component of the Pacific Meridional Mode as distributed by NOAA PSL.",
+  "reference_period": "As defined in the NOAA PSL source product",
+  "temporal_resolution": "monthly",
+  "units": "degC",
+  "time_representation": "Each value is represented by the first day of its calendar month.",
+  "data_note": "Only the SST component provided by this official machine-readable series is displayed.",
+  "citation": "Chiang, J. C. H. and Vimont, D. J. (2004): Analogous meridional modes of atmosphere–ocean variability in the tropical Atlantic and tropical Pacific. Journal of Climate, 17, 4143–4158.",
+  "value_keys": [
+    "pmm"
+  ],
+  "first_record": {
+    "date": "1948-01-01",
+    "year": 1948,
+    "month": 1,
+    "pmm": -1.36
+  },
+  "last_record": {
+    "date": "2026-02-01",
+    "year": 2026,
+    "month": 2,
+    "pmm": 1.92
+  },
+  "number_of_records": 938,
+  "retrieved_utc": "2026-09-06T07:14:39.220462+00:00",
+  "source_sha256": "c02231db8f9bd79d2ff5608f6ddac0a15ac5fc0c983ce92915ebed188f361ea3"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "dmi",
+  "name": "Dipole Mode Index",
+  "short_name": "DMI / IOD",
+  "source_institution": "NOAA Physical Sciences Laboratory",
+  "source_dataset": "HadISST1.1 Dipole Mode Index",
+  "source_url": "https://psl.noaa.gov/data/timeseries/month/data/dmi.had.long.csv",
+  "source_page_url": "https://psl.noaa.gov/data/timeseries/month/DMI/",
+  "methodology_url": "https://psl.noaa.gov/data/timeseries/month/DMI/",
+  "definition": "Difference between SST anomalies in the western equatorial Indian Ocean and the southeastern equatorial Indian Ocean, used to monitor the Indian Ocean Dipole.",
+  "reference_period": "Climatology used in the HadISST1.1 source product",
+  "temporal_resolution": "monthly",
+  "units": "degC",
+  "time_representation": "Each value is represented by the first day of its calendar month.",
+  "data_note": "The long HadISST1.1 series is used and no additional smoothing is applied.",
+  "citation": "Saji, N. H., Goswami, B. N., Vinayachandran, P. N. and Yamagata, T. (1999): A dipole mode in the tropical Indian Ocean. Nature, 401, 360–363.",
+  "value_keys": [
+    "dmi"
+  ],
+  "first_record": {
+    "date": "1870-01-01",
+    "year": 1870,
+    "month": 1,
+    "dmi": -0.438
+  },
+  "last_record": {
+    "date": "2026-05-01",
+    "year": 2026,
+    "month": 5,
+    "dmi": 0.146
+  },
+  "number_of_records": 1877,
+  "retrieved_utc": "2026-09-06T07:14:39.220462+00:00",
+  "source_sha256": "fd40b356618b251bfaf5984d4da2fa97bf173a787fdfd9785e8ba28ba601e0cf"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "nao",
+  "name": "North Atlantic Oscillation Index",
+  "short_name": "NAO",
+  "source_institution": "NOAA Climate Prediction Center, distributed by NOAA PSL",
+  "source_dataset": "Monthly CPC NAO index",
+  "source_url": "https://psl.noaa.gov/data/correlation/nao.data",
+  "source_page_url": "https://psl.noaa.gov/data/timeseries/month/NAO/",
+  "methodology_url": "https://www.cpc.ncep.noaa.gov/products/precip/CWlink/pna/nao.shtml",
+  "definition": "Monthly NAO index distributed by NOAA PSL from the NOAA CPC product, describing the leading North Atlantic atmospheric pressure-pattern variability.",
+  "reference_period": "Source standardization as published by NOAA CPC",
+  "temporal_resolution": "monthly",
+  "units": "standardized index",
+  "time_representation": "Each value is represented by the first day of its calendar month.",
+  "data_note": "Values are reproduced from the CPC monthly NAO index without interpolation or additional smoothing.",
+  "value_keys": [
+    "nao"
+  ],
+  "first_record": {
+    "date": "1950-01-01",
+    "year": 1950,
+    "month": 1,
+    "nao": 0.56
+  },
+  "last_record": {
+    "date": "2026-07-01",
+    "year": 2026,
+    "month": 7,
+    "nao": -0.28
+  },
+  "number_of_records": 919,
+  "retrieved_utc": "2026-09-06T07:14:39.220462+00:00",
+  "source_sha256": "011b716136ff74961e14cb3215a3a57295d4d41be46b9e42b327ba863601cb46"
+}
