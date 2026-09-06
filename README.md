@@ -22,8 +22,12 @@ Early development prototype.
 - MATLAB MAT files
 - Interactive web visualizations
 
-## Initial indices
+## Available indices
 
-- ENSO / RONI
-- Southern Annular Mode (SAM)
-- Madden-Julian Oscillation (MJO)
+- ENSO: RONI, Niño 1+2/3/3.4/4, SOI and MEI.v2.
+- Pacific: PDO, TPI/IPO and PMM.
+- Southern Hemisphere: SAM/AAO and Antarctic sea-ice extent/anomaly.
+- Intraseasonal variability: MJO/ROMI.
+- Indian Ocean: DMI/IOD.
+- Atlantic: AMV/AMO and NAO.
+- Atmosphere/stratosphere: QBO at 30 and 50 hPa.
