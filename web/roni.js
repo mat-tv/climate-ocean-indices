@@ -11,6 +11,8 @@
     const csvUrl = root.dataset.csvUrl;
     const jsonUrl = root.dataset.jsonUrl;
 
+    root.classList.add("climate-index");
+
     root.innerHTML = `
         <div class="climate-index-header">
             <div>
@@ -26,15 +28,21 @@
             </div>
 
             <div class="climate-index-current">
-                <div id="roni-current-value">—</div>
-                <div id="roni-current-period">Cargando...</div>
+                <div
+                    id="roni-current-value"
+                    class="climate-index-current-value">—</div>
+                <div
+                    id="roni-current-period"
+                    class="climate-index-current-period">Cargando...</div>
             </div>
         </div>
 
-        <div id="roni-chart"></div>
+        <div id="roni-chart" class="climate-index-chart"></div>
 
         <div class="climate-index-footer">
-            <div id="roni-update-info"></div>
+            <div
+                id="roni-update-info"
+                class="climate-index-update"></div>
 
             <div class="climate-index-downloads">
                 <a href="${csvUrl}" target="_blank" rel="noopener">
@@ -47,7 +55,31 @@
             </div>
         </div>
 
-        <div id="roni-error"></div>
+        <details class="climate-index-methodology">
+            <summary>Metodología y metadatos</summary>
+
+            <div
+                id="roni-metadata"
+                class="climate-index-metadata-grid"></div>
+
+            <div
+                id="roni-definition-note"
+                class="climate-index-note"></div>
+
+            <div
+                id="roni-time-note"
+                class="climate-index-note"></div>
+
+            <div
+                id="roni-data-note"
+                class="climate-index-note"></div>
+
+            <div
+                id="roni-method-links"
+                class="climate-index-method-links"></div>
+        </details>
+
+        <div id="roni-error" class="climate-index-error"></div>
     `;
 
 
@@ -102,6 +134,66 @@
             `Última consulta a la fuente: ${
                 retrieved.toISOString().replace("T", " ").slice(0, 16)
             } UTC`;
+
+
+        // ----------------------------------------------------
+        // Metadatos
+        // ----------------------------------------------------
+
+        document.getElementById("roni-metadata").innerHTML = `
+            <div class="climate-index-metadata-item">
+                <span>Fuente</span>
+                ${metadata.source_institution}
+            </div>
+
+            <div class="climate-index-metadata-item">
+                <span>Dataset</span>
+                ${metadata.source_dataset}
+            </div>
+
+            <div class="climate-index-metadata-item">
+                <span>Resolución</span>
+                ${metadata.temporal_resolution}
+            </div>
+
+            <div class="climate-index-metadata-item">
+                <span>Unidad</span>
+                °C
+            </div>
+
+            <div class="climate-index-metadata-item">
+                <span>Período de referencia</span>
+                ${metadata.reference_period}
+            </div>
+
+            <div class="climate-index-metadata-item">
+                <span>Último dato disponible</span>
+                ${last.season} ${last.year}
+            </div>
+        `;
+
+        document.getElementById("roni-definition-note").innerHTML =
+            `<strong>Definición.</strong> ${metadata.definition}`;
+
+        document.getElementById("roni-time-note").innerHTML =
+            `<strong>Representación temporal.</strong> ` +
+            metadata.time_representation;
+
+        document.getElementById("roni-data-note").innerHTML =
+            `<strong>Nota sobre los datos recientes.</strong> ` +
+            metadata.data_note;
+
+        document.getElementById("roni-method-links").innerHTML = `
+            <a
+                href="${metadata.source_page_url}"
+                target="_blank"
+                rel="noopener">Fuente oficial</a>
+
+            <a
+                href="${metadata.methodology_url}"
+                target="_blank"
+                rel="noopener">Metodología oficial</a>
+        `;
 
 
         // ----------------------------------------------------
