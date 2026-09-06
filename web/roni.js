@@ -16,7 +16,7 @@
     const projectYear = dashboard?.dataset.projectYear || "2026";
     const plotCredit = {
         text:
-            `© ${projectYear} ${projectCreator} · Visualización del portal · ` +
+            `© ${projectYear} ${projectCreator} · ` +
             "Datos: NOAA Climate Prediction Center",
         xref: "paper",
         yref: "paper",
@@ -29,6 +29,57 @@
         font: {size: 9},
         opacity: 0.62
     };
+
+    function pngDownloadButton(filename) {
+        return {
+            name: "Descargar gráfico como PNG",
+            icon: Plotly.Icons.camera,
+            click: graph => downloadCleanPng(graph, filename)
+        };
+    }
+
+    async function downloadCleanPng(graph, filename) {
+        const width = Math.round(
+            graph._fullLayout?.width || graph.clientWidth || 900
+        );
+        const height = Math.round(
+            graph._fullLayout?.height || graph.clientHeight || 500
+        );
+        const exportNode = document.createElement("div");
+        const exportLayout = JSON.parse(JSON.stringify(graph.layout));
+
+        exportNode.style.cssText =
+            `position:fixed;left:-10000px;top:0;width:${width}px;` +
+            `height:${height}px;background:#fff;`;
+        document.body.appendChild(exportNode);
+
+        exportLayout.width = width;
+        exportLayout.height = height;
+        exportLayout.autosize = false;
+        exportLayout.paper_bgcolor = "#fff";
+        exportLayout.plot_bgcolor = "#fff";
+
+        if (exportLayout.xaxis?.rangeselector) {
+            exportLayout.xaxis.rangeselector.visible = false;
+        }
+
+        try {
+            await Plotly.newPlot(exportNode, graph.data, exportLayout, {
+                staticPlot: true,
+                displayModeBar: false
+            });
+            await Plotly.downloadImage(exportNode, {
+                format: "png",
+                filename,
+                width,
+                height,
+                scale: 1
+            });
+        } finally {
+            Plotly.purge(exportNode);
+            exportNode.remove();
+        }
+    }
 
     root.classList.add("climate-index");
 
@@ -353,10 +404,8 @@
 
             scrollZoom: true,
 
-            toImageButtonOptions: {
-                format: "png",
-                filename: "RONI"
-            }
+            modeBarButtonsToRemove: ["toImage"],
+            modeBarButtonsToAdd: [pngDownloadButton("RONI")]
         };
 
 

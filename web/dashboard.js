@@ -109,6 +109,57 @@
             : url;
     }
 
+    function pngDownloadButton(filename) {
+        return {
+            name: "Descargar gráfico como PNG",
+            icon: window.Plotly.Icons.camera,
+            click: graph => downloadCleanPng(graph, filename)
+        };
+    }
+
+    async function downloadCleanPng(graph, filename) {
+        const width = Math.round(
+            graph._fullLayout?.width || graph.clientWidth || 900
+        );
+        const height = Math.round(
+            graph._fullLayout?.height || graph.clientHeight || 500
+        );
+        const exportNode = document.createElement("div");
+        const exportLayout = JSON.parse(JSON.stringify(graph.layout));
+
+        exportNode.style.cssText =
+            `position:fixed;left:-10000px;top:0;width:${width}px;` +
+            `height:${height}px;background:#fff;`;
+        document.body.appendChild(exportNode);
+
+        exportLayout.width = width;
+        exportLayout.height = height;
+        exportLayout.autosize = false;
+        exportLayout.paper_bgcolor = "#fff";
+        exportLayout.plot_bgcolor = "#fff";
+
+        if (exportLayout.xaxis?.rangeselector) {
+            exportLayout.xaxis.rangeselector.visible = false;
+        }
+
+        try {
+            await window.Plotly.newPlot(exportNode, graph.data, exportLayout, {
+                staticPlot: true,
+                displayModeBar: false
+            });
+            await window.Plotly.downloadImage(exportNode, {
+                format: "png",
+                filename,
+                width,
+                height,
+                scale: 1
+            });
+        } finally {
+            window.Plotly.purge(exportNode);
+            exportNode.remove();
+        }
+    }
+
     function setMenu(open) {
         dashboard.classList.toggle("is-menu-open", open);
         menuButton.setAttribute("aria-expanded", String(open));
@@ -285,7 +336,7 @@
         return pane;
     }
 
-    function prepareCsvDownloads(indexRoot, view) {
+    function prepareDownloads(indexRoot) {
         const links = Array.from(
             indexRoot.querySelectorAll(".climate-index-downloads a")
         );
@@ -293,20 +344,14 @@
             new URL(link.href, window.location.href).pathname.endsWith(".csv")
         );
 
-        if (!csvLink || csvLink.dataset.climateCsvDownload) {
-            return;
+        if (csvLink && !csvLink.dataset.climateDownloadFormat) {
+            csvLink.textContent = "Descargar CSV";
+            csvLink.title =
+                "Incluye al comienzo la procedencia y el crédito del portal";
+            csvLink.dataset.climateDownloadFormat = "csv";
+            csvLink.removeAttribute("target");
+            csvLink.removeAttribute("rel");
         }
-
-        const cleanLink = csvLink.cloneNode(true);
-        cleanLink.textContent = "CSV limpio";
-        cleanLink.title = "Archivo canónico sin líneas adicionales";
-
-        csvLink.textContent = "CSV con referencia";
-        csvLink.title =
-            "Incluye dos líneas iniciales de procedencia, marcadas con #";
-        csvLink.dataset.climateCsvDownload = view;
-        csvLink.removeAttribute("target");
-        csvLink.after(cleanLink);
     }
 
     async function downloadDocumentedCsv(link) {
@@ -318,11 +363,12 @@
             const response = await fetch(link.href);
 
             if (!response.ok) {
-                throw new Error("No se pudo preparar el CSV documentado");
+                throw new Error("No se pudo preparar la descarga documentada");
             }
 
-            const originalCsv = await response.text();
+            const originalCsv = (await response.text()).replace(/^\uFEFF/, "");
             const portalUrl = `${window.location.origin}${window.location.pathname}`;
+            const sourceName = new URL(link.href).pathname.split("/").pop();
             const reference = [
                 `# Descargado desde: ${portalUrl}`,
                 `# ${portalTitle} — © ${projectYear} ${projectCreator}`
@@ -333,18 +379,16 @@
             });
             const objectUrl = URL.createObjectURL(blob);
             const download = document.createElement("a");
-            const sourceName = new URL(link.href).pathname.split("/").pop();
-            const downloadName = sourceName.replace(/\.csv$/i, "_portal.csv");
 
             download.href = objectUrl;
-            download.download = downloadName;
+            download.download = sourceName;
             document.body.appendChild(download);
             download.click();
             download.remove();
             window.setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
         } catch (error) {
             console.error(error);
-            link.textContent = "Use CSV limpio";
+            link.textContent = "No se pudo descargar";
             window.setTimeout(() => {
                 link.textContent = previousText;
             }, 2500);
@@ -380,7 +424,7 @@
         try {
             pane.replaceChildren(indexRoot);
             await loadScript(config.script);
-            prepareCsvDownloads(indexRoot, view);
+            prepareDownloads(indexRoot);
             pane.removeAttribute("aria-busy");
         } catch (error) {
             console.error(error);
@@ -600,10 +644,10 @@
                 responsive: true,
                 displaylogo: false,
                 scrollZoom: true,
-                toImageButtonOptions: {
-                    format: "png",
-                    filename: "comparacion_indices_climaticos"
-                }
+                modeBarButtonsToRemove: ["toImage"],
+                modeBarButtonsToAdd: [
+                    pngDownloadButton("comparacion_indices_climaticos")
+                ]
             };
 
             await window.Plotly.react(chart, traces, layout, config);
@@ -681,9 +725,11 @@
     });
 
     content.addEventListener("click", event => {
-        const csvDownload = event.target.closest("[data-climate-csv-download]");
+        const documentedDownload = event.target.closest(
+            "[data-climate-download-format]"
+        );
 
-        if (csvDownload) {
+        if (documentedDownload) {
             if (
                 event.button !== 0 ||
                 event.ctrlKey ||
@@ -695,7 +741,7 @@
             }
 
             event.preventDefault();
-            downloadDocumentedCsv(csvDownload);
+            downloadDocumentedCsv(documentedDownload);
             return;
         }
 
