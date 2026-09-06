@@ -100,7 +100,7 @@
             <div class="climate-index-current">
                 <div
                     id="roni-current-value"
-                    class="climate-index-current-value">—</div>
+                    class="climate-index-current-value">…</div>
                 <div
                     id="roni-current-period"
                     class="climate-index-current-period">Cargando...</div>

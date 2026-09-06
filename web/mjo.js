@@ -102,7 +102,7 @@
                 <div
                     id="mjo-current-value"
                     class="climate-index-current-value">
-                    —
+                    …
                 </div>
 
                 <div
@@ -188,7 +188,7 @@
                 Los valores faltantes de la fuente se conservan como
                 valores nulos; no se rellenan ni interpolan.
                 Registros con valores faltantes:
-                <span id="mjo-missing-count">—</span>.
+                <span id="mjo-missing-count">…</span>.
             </div>
 
             <div

@@ -103,7 +103,7 @@
                 <div
                     id="pdo-current-value"
                     class="climate-index-current-value">
-                    —
+                    …
                 </div>
 
                 <div

@@ -57,6 +57,220 @@
             metadata: "mjo.json",
             csv: "mjo.csv",
             json: "mjo.json"
+        },
+        nino: {
+            rootId: "climate-nino",
+            script: "climate-series.js",
+            data: "nino.json",
+            metadata: "nino.json",
+            csv: "nino.csv",
+            json: "nino.json",
+            seriesView: {
+                kicker: "EL NIÑO–SOUTHERN OSCILLATION",
+                title: "Regiones Niño del Pacífico tropical",
+                subtitle: "Niño 1+2 · Niño 3 · Niño 3.4 · Niño 4",
+                shortLabel: "las regiones Niño",
+                primaryKey: "nino_3_4",
+                yAxisTitle: "Anomalía de TSM [°C]",
+                defaultYears: 5,
+                creditSource: "NOAA Climate Prediction Center",
+                pngFilename: "regiones_nino",
+                series: [
+                    {key: "nino_1_2", label: "Niño 1+2", unit: "°C"},
+                    {key: "nino_3", label: "Niño 3", unit: "°C", dash: "dot"},
+                    {key: "nino_3_4", label: "Niño 3.4", unit: "°C", dash: "dash"},
+                    {key: "nino_4", label: "Niño 4", unit: "°C", dash: "dashdot"}
+                ]
+            }
+        },
+        soi: {
+            rootId: "climate-soi",
+            script: "climate-series.js",
+            data: "soi.json",
+            metadata: "soi.json",
+            csv: "soi.csv",
+            json: "soi.json",
+            seriesView: {
+                kicker: "EL NIÑO–SOUTHERN OSCILLATION",
+                title: "Southern Oscillation Index",
+                subtitle: "SOI · el componente atmosférico del ENSO",
+                shortLabel: "SOI",
+                primaryKey: "soi",
+                yAxisTitle: "SOI [índice estandarizado]",
+                defaultYears: 20,
+                creditSource: "NOAA Climate Prediction Center",
+                pngFilename: "SOI",
+                series: [{key: "soi", label: "SOI", unit: "", digits: 1}]
+            }
+        },
+        mei: {
+            rootId: "climate-mei",
+            script: "climate-series.js",
+            data: "mei.json",
+            metadata: "mei.json",
+            csv: "mei.csv",
+            json: "mei.json",
+            seriesView: {
+                kicker: "EL NIÑO–SOUTHERN OSCILLATION",
+                title: "Multivariate ENSO Index Version 2",
+                subtitle: "MEI.v2 · NOAA Physical Sciences Laboratory",
+                shortLabel: "MEI.v2",
+                primaryKey: "mei",
+                yAxisTitle: "MEI.v2 [índice estandarizado]",
+                defaultYears: 20,
+                creditSource: "NOAA Physical Sciences Laboratory",
+                pngFilename: "MEIv2",
+                series: [{key: "mei", label: "MEI.v2", unit: ""}]
+            }
+        },
+        tpi: {
+            rootId: "climate-tpi",
+            script: "climate-series.js",
+            data: "tpi.json",
+            metadata: "tpi.json",
+            csv: "tpi.csv",
+            json: "tpi.json",
+            seriesView: {
+                kicker: "VARIABILIDAD DEL PACÍFICO",
+                title: "Tripole Index / Interdecadal Pacific Oscillation",
+                subtitle: "TPI / IPO · serie mensual sin suavizar",
+                shortLabel: "TPI / IPO",
+                primaryKey: "tpi",
+                yAxisTitle: "TPI [°C]",
+                defaultYears: 30,
+                creditSource: "NOAA Physical Sciences Laboratory",
+                pngFilename: "TPI_IPO",
+                series: [{key: "tpi", label: "TPI", unit: "°C", digits: 3}]
+            }
+        },
+        pmm: {
+            rootId: "climate-pmm",
+            script: "climate-series.js",
+            data: "pmm.json",
+            metadata: "pmm.json",
+            csv: "pmm.csv",
+            json: "pmm.json",
+            seriesView: {
+                kicker: "VARIABILIDAD DEL PACÍFICO",
+                title: "Pacific Meridional Mode",
+                subtitle: "PMM · el componente de temperatura superficial del mar",
+                shortLabel: "PMM",
+                primaryKey: "pmm",
+                yAxisTitle: "Componente de TSM del PMM [°C]",
+                defaultYears: 20,
+                creditSource: "NOAA Physical Sciences Laboratory",
+                pngFilename: "PMM",
+                series: [{key: "pmm", label: "Componente de TSM del PMM", unit: "°C", digits: 2}]
+            }
+        },
+        dmi: {
+            rootId: "climate-dmi",
+            script: "climate-series.js",
+            data: "dmi.json",
+            metadata: "dmi.json",
+            csv: "dmi.csv",
+            json: "dmi.json",
+            seriesView: {
+                kicker: "OCÉANO ÍNDICO",
+                title: "Dipole Mode Index",
+                subtitle: "DMI / IOD · HadISST1.1",
+                shortLabel: "DMI / IOD",
+                primaryKey: "dmi",
+                yAxisTitle: "DMI [°C]",
+                defaultYears: 20,
+                creditSource: "NOAA Physical Sciences Laboratory",
+                pngFilename: "DMI_IOD",
+                series: [{key: "dmi", label: "DMI", unit: "°C", digits: 3}]
+            }
+        },
+        qbo: {
+            rootId: "climate-qbo",
+            script: "climate-series.js",
+            data: "qbo.json",
+            metadata: "qbo.json",
+            csv: "qbo.csv",
+            json: "qbo.json",
+            seriesView: {
+                kicker: "ATMÓSFERA / ESTRATÓSFERA",
+                title: "Quasi-Biennial Oscillation",
+                subtitle: "QBO · el viento zonal ecuatorial a 30 y 50 hPa",
+                shortLabel: "QBO",
+                primaryKey: "qbo_30",
+                secondaryCurrentKey: "qbo_50",
+                yAxisTitle: "Viento zonal [m s⁻¹]",
+                defaultYears: 10,
+                creditSource: "NOAA Climate Prediction Center",
+                pngFilename: "QBO_30_50hPa",
+                series: [
+                    {key: "qbo_30", label: "QBO 30 hPa", unit: "m s⁻¹"},
+                    {key: "qbo_50", label: "QBO 50 hPa", unit: "m s⁻¹", dash: "dash"}
+                ]
+            }
+        },
+        sea_ice: {
+            rootId: "climate-sea-ice",
+            script: "climate-series.js",
+            data: "sea_ice.json",
+            metadata: "sea_ice.json",
+            csv: "sea_ice.csv",
+            json: "sea_ice.json",
+            seriesView: {
+                kicker: "HEMISFERIO SUR",
+                title: "Extensión del hielo marino antártico",
+                subtitle: "Extensión diaria y anomalía respecto de 1981–2010",
+                shortLabel: "hielo marino antártico",
+                primaryKey: "extent",
+                secondaryCurrentKey: "anomaly",
+                yAxisTitle: "Extensión [millones km²]",
+                secondaryAxisTitle: "Anomalía [millones km²]",
+                defaultYears: 3,
+                creditSource: "NSIDC Sea Ice Index, Version 4",
+                pngFilename: "hielo_marino_antartico",
+                series: [
+                    {key: "extent", label: "Extensión", unit: "mill. km²", digits: 3, signed: false},
+                    {key: "anomaly", label: "Anomalía 1981–2010", unit: "mill. km²", digits: 3, secondaryAxis: true, dash: "dot"}
+                ]
+            }
+        },
+        amo: {
+            rootId: "climate-amo",
+            script: "climate-series.js",
+            data: "amo.json",
+            metadata: "amo.json",
+            csv: "amo.csv",
+            json: "amo.json",
+            seriesView: {
+                kicker: "ATLÁNTICO",
+                title: "Atlantic Multidecadal Variability / Oscillation",
+                subtitle: "AMV / AMO · la anomalía mensual ERSSTv5, 0–60°N",
+                shortLabel: "AMV / AMO",
+                primaryKey: "amo",
+                yAxisTitle: "Anomalía de TSM [°C]",
+                defaultYears: 30,
+                creditSource: "NOAA National Centers for Environmental Information",
+                pngFilename: "AMV_AMO",
+                series: [{key: "amo", label: "AMV / AMO", unit: "°C"}]
+            }
+        },
+        nao: {
+            rootId: "climate-nao",
+            script: "climate-series.js",
+            data: "nao.json",
+            metadata: "nao.json",
+            csv: "nao.csv",
+            json: "nao.json",
+            seriesView: {
+                kicker: "ATLÁNTICO NORTE",
+                title: "North Atlantic Oscillation",
+                subtitle: "NAO · índice mensual de NOAA CPC",
+                shortLabel: "NAO",
+                primaryKey: "nao",
+                yAxisTitle: "NAO [índice estandarizado]",
+                defaultYears: 20,
+                creditSource: "NOAA CPC / Physical Sciences Laboratory",
+                pngFilename: "NAO",
+                series: [{key: "nao", label: "NAO", unit: ""}]
+            }
         }
     };
 
@@ -77,9 +291,59 @@
             unit: "índice"
         },
         mjo: {
-            label: "MJO / ROMI (amplitud)",
+            label: "Amplitud de MJO / ROMI",
             valueKey: "amplitude",
             unit: "adimensional"
+        },
+        nino: {
+            label: "Niño 3.4",
+            valueKey: "nino_3_4",
+            unit: "°C"
+        },
+        soi: {
+            label: "SOI",
+            valueKey: "soi",
+            unit: "índice"
+        },
+        mei: {
+            label: "MEI.v2",
+            valueKey: "mei",
+            unit: "índice"
+        },
+        tpi: {
+            label: "TPI / IPO",
+            valueKey: "tpi",
+            unit: "°C"
+        },
+        pmm: {
+            label: "Componente de TSM del PMM",
+            valueKey: "pmm",
+            unit: "°C"
+        },
+        dmi: {
+            label: "DMI / IOD",
+            valueKey: "dmi",
+            unit: "°C"
+        },
+        qbo: {
+            label: "QBO 30 hPa",
+            valueKey: "qbo_30",
+            unit: "m s⁻¹"
+        },
+        sea_ice: {
+            label: "Anomalía de hielo antártico",
+            valueKey: "anomaly",
+            unit: "mill. km²"
+        },
+        amo: {
+            label: "AMV / AMO",
+            valueKey: "amo",
+            unit: "°C"
+        },
+        nao: {
+            label: "NAO",
+            valueKey: "nao",
+            unit: "índice"
         }
     };
 
@@ -274,26 +538,44 @@
                 <div class="climate-overview-grid">
                     <button type="button" class="climate-overview-card" data-open-view="roni">
                         <span class="climate-overview-family">ENSO</span>
-                        <strong>RONI</strong>
-                        <span>Relative Oceanic Niño Index</span>
+                        <strong>El Niño–Oscilación del Sur</strong>
+                        <span>RONI · Regiones Niño · SOI · MEI.v2</span>
                     </button>
 
                     <button type="button" class="climate-overview-card" data-open-view="pdo">
                         <span class="climate-overview-family">Pacífico</span>
-                        <strong>PDO</strong>
-                        <span>Pacific Decadal Oscillation</span>
+                        <strong>Variabilidad del Pacífico</strong>
+                        <span>PDO · TPI / IPO · PMM</span>
                     </button>
 
                     <button type="button" class="climate-overview-card" data-open-view="sam">
                         <span class="climate-overview-family">Hemisferio Sur</span>
-                        <strong>SAM / AAO</strong>
-                        <span>Southern Annular Mode</span>
+                        <strong>Atmósfera y criósfera austral</strong>
+                        <span>SAM / AAO · Hielo marino antártico</span>
                     </button>
 
                     <button type="button" class="climate-overview-card" data-open-view="mjo">
                         <span class="climate-overview-family">Intraestacional</span>
-                        <strong>MJO / ROMI</strong>
-                        <span>Madden–Julian Oscillation</span>
+                        <strong>Variabilidad tropical</strong>
+                        <span>MJO / ROMI</span>
+                    </button>
+
+                    <button type="button" class="climate-overview-card" data-open-view="dmi">
+                        <span class="climate-overview-family">Océano Índico</span>
+                        <strong>Dipolo del Índico</strong>
+                        <span>DMI / IOD</span>
+                    </button>
+
+                    <button type="button" class="climate-overview-card" data-open-view="amo">
+                        <span class="climate-overview-family">Atlántico</span>
+                        <strong>Variabilidad oceánica y atmosférica</strong>
+                        <span>AMV / AMO · NAO</span>
+                    </button>
+
+                    <button type="button" class="climate-overview-card" data-open-view="qbo">
+                        <span class="climate-overview-family">Atmósfera / Estratósfera</span>
+                        <strong>Viento ecuatorial estratosférico</strong>
+                        <span>QBO a 30 y 50 hPa</span>
                     </button>
                 </div>
 
@@ -371,7 +653,7 @@
             const sourceName = new URL(link.href).pathname.split("/").pop();
             const reference = [
                 `# Descargado desde: ${portalUrl}`,
-                `# ${portalTitle} — © ${projectYear} ${projectCreator}`
+                `# ${portalTitle} · © ${projectYear} ${projectCreator}`
             ].join("\r\n");
             const documentedCsv = `${reference}\r\n${originalCsv}`;
             const blob = new Blob([documentedCsv], {
@@ -424,6 +706,9 @@
         try {
             pane.replaceChildren(indexRoot);
             await loadScript(config.script);
+            if (config.seriesView) {
+                await window.ClimateSeries.init(indexRoot, config.seriesView);
+            }
             prepareDownloads(indexRoot);
             pane.removeAttribute("aria-busy");
         } catch (error) {
@@ -453,7 +738,17 @@
                         <label><input type="checkbox" name="series" value="roni" checked> RONI</label>
                         <label><input type="checkbox" name="series" value="pdo"> PDO</label>
                         <label><input type="checkbox" name="series" value="sam" checked> SAM / AAO</label>
-                        <label><input type="checkbox" name="series" value="mjo"> MJO / ROMI — amplitud</label>
+                        <label><input type="checkbox" name="series" value="mjo"> Amplitud de MJO / ROMI</label>
+                        <label><input type="checkbox" name="series" value="nino"> Niño 3.4</label>
+                        <label><input type="checkbox" name="series" value="soi"> SOI</label>
+                        <label><input type="checkbox" name="series" value="mei"> MEI.v2</label>
+                        <label><input type="checkbox" name="series" value="tpi"> TPI / IPO</label>
+                        <label><input type="checkbox" name="series" value="pmm"> Componente de TSM del PMM</label>
+                        <label><input type="checkbox" name="series" value="dmi"> DMI / IOD</label>
+                        <label><input type="checkbox" name="series" value="qbo"> QBO 30 hPa</label>
+                        <label><input type="checkbox" name="series" value="sea_ice"> Anomalía de hielo antártico</label>
+                        <label><input type="checkbox" name="series" value="amo"> AMV / AMO</label>
+                        <label><input type="checkbox" name="series" value="nao"> NAO</label>
                     </fieldset>
 
                     <label class="climate-compare-field">
