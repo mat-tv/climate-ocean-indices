@@ -3995,5 +3995,12 @@
     "month": 7,
     "season": "JJ",
     "mei": 2.41
+  },
+  {
+    "date": "2026-08-01",
+    "year": 2026,
+    "month": 8,
+    "season": "JA",
+    "mei": 2.54
   }
 ]

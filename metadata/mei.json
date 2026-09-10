@@ -25,13 +25,13 @@
     "mei": 0.46
   },
   "last_record": {
-    "date": "2026-07-01",
+    "date": "2026-08-01",
     "year": 2026,
-    "month": 7,
-    "season": "JJ",
-    "mei": 2.41
+    "month": 8,
+    "season": "JA",
+    "mei": 2.54
   },
-  "number_of_records": 571,
-  "retrieved_utc": "2026-09-09T08:12:28.839042+00:00",
-  "source_sha256": "4877bb4e0e304fc6377ec5246d4c10654b7c7df5ba81480c9c677fcb762a2654"
+  "number_of_records": 572,
+  "retrieved_utc": "2026-09-10T08:11:47.358396+00:00",
+  "source_sha256": "1976eeab2b8437fe1937cb8be3aff66f0176196523804923d89b34293983d2a1"
 }
