@@ -21,15 +21,15 @@
     "sam": -1.5563026666641235
   },
   "last_record": {
-    "date": "2026-09-21",
-    "sam": 0.827087895101281
+    "date": "2026-09-22",
+    "sam": 0.9635845301977451
   },
-  "number_of_records": 17431,
+  "number_of_records": 17432,
   "missing_calendar_days": 0,
   "missing_value_count": 1,
   "missing_value_dates": [
     "2003-04-30"
   ],
-  "retrieved_utc": "2026-09-24T08:31:30.466830+00:00",
-  "source_sha256": "b54fb9fca032a4d6f5ef08f66588ddb6ef7ba38893be88d453f05c25b29c287a"
+  "retrieved_utc": "2026-09-25T08:53:12.282987+00:00",
+  "source_sha256": "25eebb2f48b8c0af963f1caeb4cb71854c3dec225171b13a4dcd1c3b9ec40d7c"
 }
