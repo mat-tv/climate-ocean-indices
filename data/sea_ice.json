@@ -142645,8 +142645,17 @@
     "year": 2026,
     "month": 9,
     "day": 24,
-    "extent": 17.17,
+    "extent": 17.166,
     "climatology_1981_2010": 18.571,
-    "anomaly": -1.401
+    "anomaly": -1.405
+  },
+  {
+    "date": "2026-09-25",
+    "year": 2026,
+    "month": 9,
+    "day": 25,
+    "extent": 17.154,
+    "climatology_1981_2010": 18.566,
+    "anomaly": -1.412
   }
 ]
