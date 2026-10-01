@@ -31,19 +31,19 @@
     "amplitude": 0.14323
   },
   "last_record": {
-    "date": "2026-09-25",
+    "date": "2026-09-26",
     "hour_utc": 0,
-    "romi_pc1": 0.07526,
-    "romi_pc2": 0.69944,
-    "phase_space_x": 0.69944,
-    "phase_space_y": -0.07526,
+    "romi_pc1": 0.42237,
+    "romi_pc2": 0.50947,
+    "phase_space_x": 0.50947,
+    "phase_space_y": -0.42237,
     "phase": 4,
-    "amplitude": 0.70347
+    "amplitude": 0.66178
   },
-  "number_of_records": 13052,
+  "number_of_records": 13053,
   "missing_calendar_days": 0,
   "missing_value_count": 0,
   "missing_value_dates": [],
-  "retrieved_utc": "2026-09-30T09:46:39.024021+00:00",
-  "source_sha256": "3d1041f06a05b7a1679f62d48331089c60c141ab67e2f4ab4abe2ec615f1cfb9"
+  "retrieved_utc": "2026-10-01T10:13:23.438943+00:00",
+  "source_sha256": "2e28d712d60058962fd2f7f3a9d3b108195f8f1b74e7e9a32f537f04ad41a2cd"
 }
