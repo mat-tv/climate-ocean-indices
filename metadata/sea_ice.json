@@ -38,14 +38,14 @@
     "year": 2026,
     "month": 9,
     "day": 29,
-    "extent": 16.827,
+    "extent": 16.825,
     "climatology_1981_2010": 18.525,
-    "anomaly": -1.698
+    "anomaly": -1.7
   },
   "number_of_records": 15855,
-  "retrieved_utc": "2026-10-01T10:13:24.463442+00:00",
+  "retrieved_utc": "2026-10-02T09:50:55.694862+00:00",
   "source_sha256": {
-    "sea_ice": "d302a8f5732d92e2615d00dc5844bb04c6abb6fba6f12036a81d2fb4a1905448",
+    "sea_ice": "3283c3472a413a74f5f6c8e2274fba7592affbd39fad2e872224cc1748f0ab96",
     "sea_ice_climatology": "18c8e6285ac3805277664ea89acec65e09b8bc6826acdb7dbe5ee2ef3ac5eb41"
   }
 }
