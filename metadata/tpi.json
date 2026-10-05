@@ -24,12 +24,12 @@
     "tpi": 0.356
   },
   "last_record": {
-    "date": "2026-08-01",
+    "date": "2026-09-01",
     "year": 2026,
-    "month": 8,
-    "tpi": 1.088
+    "month": 9,
+    "tpi": 1.331
   },
-  "number_of_records": 2072,
-  "retrieved_utc": "2026-10-04T09:52:30.603468+00:00",
-  "source_sha256": "4c078d35e29df8325e6c34ad2c3bf090957c6e4ae74dc04253bed39908981d1a"
+  "number_of_records": 2073,
+  "retrieved_utc": "2026-10-05T10:33:11.783907+00:00",
+  "source_sha256": "f0d68d97490e494ad47df65876bab82f19a1cc945d9ff0241763b079b06ec9d3"
 }
