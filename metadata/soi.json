@@ -23,12 +23,12 @@
     "soi": 1.5
   },
   "last_record": {
-    "date": "2026-08-01",
+    "date": "2026-09-01",
     "year": 2026,
-    "month": 8,
-    "soi": -1.1
+    "month": 9,
+    "soi": -2.0
   },
-  "number_of_records": 908,
-  "retrieved_utc": "2026-10-05T10:33:11.783907+00:00",
-  "source_sha256": "2c63ea03b7b708513bdc217d451d6757cd08a75bcbfd32f89a1fa6b739a704e9"
+  "number_of_records": 909,
+  "retrieved_utc": "2026-10-06T10:24:58.581877+00:00",
+  "source_sha256": "720365224dd280be7b6c1c6f9ef3dc11d03c2cf404b2d0bf07a68f4f4e8d35ae"
 }

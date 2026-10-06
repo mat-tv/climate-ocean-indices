@@ -28,16 +28,16 @@
     "qbo_50": 7.38
   },
   "last_record": {
-    "date": "2026-08-01",
+    "date": "2026-09-01",
     "year": 2026,
-    "month": 8,
-    "qbo_30": 11.27,
-    "qbo_50": -0.32
+    "month": 9,
+    "qbo_30": 12.9,
+    "qbo_50": 4.21
   },
-  "number_of_records": 572,
-  "retrieved_utc": "2026-10-05T10:33:11.783907+00:00",
+  "number_of_records": 573,
+  "retrieved_utc": "2026-10-06T10:24:58.581877+00:00",
   "source_sha256": {
-    "qbo_30": "c05beb569aad871f93bc1e571611b9f726d0214954c70fd172d5c393abeb6c93",
-    "qbo_50": "b3f919632c1fe676ec4632f85ab9e886aecc27f1a108a23e337c763b90cd4879"
+    "qbo_30": "5a1447c2c155295d123659948ef61bfd123bbfdf84661c21e5f50686b534cf4f",
+    "qbo_50": "307652baa2048ccdebdedf60901ead8dfb27576511d7817addf5f15772d1573f"
   }
 }
