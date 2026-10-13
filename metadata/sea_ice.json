@@ -43,7 +43,7 @@
     "anomaly": -1.752
   },
   "number_of_records": 15867,
-  "retrieved_utc": "2026-10-12T10:57:46.122510+00:00",
+  "retrieved_utc": "2026-10-13T10:41:50.871049+00:00",
   "source_sha256": {
     "sea_ice": "ac121e2df6bb511cf76d699fc95a9308256ffbfa8ad198d2a138569f1fa920fd",
     "sea_ice_climatology": "18c8e6285ac3805277664ea89acec65e09b8bc6826acdb7dbe5ee2ef3ac5eb41"
