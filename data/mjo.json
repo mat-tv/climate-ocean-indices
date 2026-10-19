@@ -130662,41 +130662,51 @@
   {
     "date": "2026-10-10",
     "hour_utc": 0,
-    "romi_pc1": 1.05742,
-    "romi_pc2": -0.37529,
-    "phase_space_x": -0.37529,
-    "phase_space_y": -1.05742,
+    "romi_pc1": 1.06436,
+    "romi_pc2": -0.37453,
+    "phase_space_x": -0.37453,
+    "phase_space_y": -1.06436,
     "phase": 2,
-    "amplitude": 1.12204
+    "amplitude": 1.12833
   },
   {
     "date": "2026-10-11",
     "hour_utc": 0,
-    "romi_pc1": 1.18345,
-    "romi_pc2": -0.32277,
-    "phase_space_x": -0.32277,
-    "phase_space_y": -1.18345,
+    "romi_pc1": 1.1814,
+    "romi_pc2": -0.31972,
+    "phase_space_x": -0.31972,
+    "phase_space_y": -1.1814,
     "phase": 2,
-    "amplitude": 1.22668
+    "amplitude": 1.2239
   },
   {
     "date": "2026-10-12",
     "hour_utc": 0,
-    "romi_pc1": 1.27246,
-    "romi_pc2": -0.26454,
-    "phase_space_x": -0.26454,
-    "phase_space_y": -1.27246,
+    "romi_pc1": 1.26255,
+    "romi_pc2": -0.26295,
+    "phase_space_x": -0.26295,
+    "phase_space_y": -1.26255,
     "phase": 2,
-    "amplitude": 1.29966
+    "amplitude": 1.28964
   },
   {
     "date": "2026-10-13",
     "hour_utc": 0,
-    "romi_pc1": 1.31211,
-    "romi_pc2": -0.2118,
-    "phase_space_x": -0.2118,
-    "phase_space_y": -1.31211,
+    "romi_pc1": 1.29858,
+    "romi_pc2": -0.21606,
+    "phase_space_x": -0.21606,
+    "phase_space_y": -1.29858,
     "phase": 2,
-    "amplitude": 1.3291
+    "amplitude": 1.31643
+  },
+  {
+    "date": "2026-10-14",
+    "hour_utc": 0,
+    "romi_pc1": 1.31192,
+    "romi_pc2": -0.15644,
+    "phase_space_x": -0.15644,
+    "phase_space_y": -1.31192,
+    "phase": 2,
+    "amplitude": 1.32122
   }
 ]
