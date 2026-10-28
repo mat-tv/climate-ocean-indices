@@ -24,12 +24,12 @@
     "dmi": -0.438
   },
   "last_record": {
-    "date": "2026-05-01",
+    "date": "2026-07-01",
     "year": 2026,
-    "month": 5,
-    "dmi": 0.146
+    "month": 7,
+    "dmi": 0.539
   },
-  "number_of_records": 1877,
-  "retrieved_utc": "2026-10-27T09:05:13.207086+00:00",
-  "source_sha256": "fd40b356618b251bfaf5984d4da2fa97bf173a787fdfd9785e8ba28ba601e0cf"
+  "number_of_records": 1879,
+  "retrieved_utc": "2026-10-28T09:46:08.551786+00:00",
+  "source_sha256": "6f5772b234fa6fce4f32830b5731a003c53e83a30220d85bc371cc8e8d8f69d3"
 }
