@@ -142855,5 +142855,95 @@
     "extent": 16.204,
     "climatology_1981_2010": 18.116,
     "anomaly": -1.912
+  },
+  {
+    "date": "2026-10-18",
+    "year": 2026,
+    "month": 10,
+    "day": 18,
+    "extent": 16.275,
+    "climatology_1981_2010": 18.062,
+    "anomaly": -1.787
+  },
+  {
+    "date": "2026-10-19",
+    "year": 2026,
+    "month": 10,
+    "day": 19,
+    "extent": 16.248,
+    "climatology_1981_2010": 18.012,
+    "anomaly": -1.764
+  },
+  {
+    "date": "2026-10-20",
+    "year": 2026,
+    "month": 10,
+    "day": 20,
+    "extent": 16.235,
+    "climatology_1981_2010": 17.97,
+    "anomaly": -1.735
+  },
+  {
+    "date": "2026-10-21",
+    "year": 2026,
+    "month": 10,
+    "day": 21,
+    "extent": 16.267,
+    "climatology_1981_2010": 17.921,
+    "anomaly": -1.654
+  },
+  {
+    "date": "2026-10-22",
+    "year": 2026,
+    "month": 10,
+    "day": 22,
+    "extent": 16.229,
+    "climatology_1981_2010": 17.872,
+    "anomaly": -1.643
+  },
+  {
+    "date": "2026-10-23",
+    "year": 2026,
+    "month": 10,
+    "day": 23,
+    "extent": 16.175,
+    "climatology_1981_2010": 17.833,
+    "anomaly": -1.658
+  },
+  {
+    "date": "2026-10-24",
+    "year": 2026,
+    "month": 10,
+    "day": 24,
+    "extent": 16.102,
+    "climatology_1981_2010": 17.791,
+    "anomaly": -1.689
+  },
+  {
+    "date": "2026-10-25",
+    "year": 2026,
+    "month": 10,
+    "day": 25,
+    "extent": 16.08,
+    "climatology_1981_2010": 17.736,
+    "anomaly": -1.656
+  },
+  {
+    "date": "2026-10-26",
+    "year": 2026,
+    "month": 10,
+    "day": 26,
+    "extent": 16.049,
+    "climatology_1981_2010": 17.681,
+    "anomaly": -1.632
+  },
+  {
+    "date": "2026-10-27",
+    "year": 2026,
+    "month": 10,
+    "day": 27,
+    "extent": 16.016,
+    "climatology_1981_2010": 17.633,
+    "anomaly": -1.617
   }
 ]
