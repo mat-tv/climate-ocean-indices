@@ -29,18 +29,16 @@
     "pdo": 0.366
   },
   "last_valid_record": {
-    "date": "2026-07-01",
+    "date": "2026-09-01",
     "year": 2026,
-    "month": 7,
-    "pdo": -1.598
+    "month": 9,
+    "pdo": -1.082
   },
   "number_of_records": 1884,
-  "number_of_valid_records": 1879,
+  "number_of_valid_records": 1881,
   "missing_value_sentinel": -9999.0,
-  "missing_value_count": 5,
+  "missing_value_count": 3,
   "missing_value_dates": [
-    "2026-08-01",
-    "2026-09-01",
     "2026-10-01",
     "2026-11-01",
     "2026-12-01"
@@ -49,7 +47,7 @@
     "PDO from Ensemble SST",
     "https://psl.noaa.gov//pdo/",
     "Using EOF from 1920 to 2014 for N Pacific (see webpage)",
-    "Date produced Nov 2 2026",
+    "Date produced Nov 4 2026",
     "SST interpolated to a 2x2 grid",
     "Datasets used COBE2-SST HADISST1.1 NOAA ERSSTV6"
   ],
@@ -61,6 +59,6 @@
     "usage_url": "https://www.psl.noaa.gov/disclaimer/"
   },
   "citation": "Newman, M., Alexander, M. A., Ault, T. R., Cobb, K. M., Deser, C., Di Lorenzo, E., Mantua, N., Miller, A. J., Minobe, S., Nakamura, H., Schneider, N., Vimont, D. J., Phillips, A. S., Scott, J. D., and Smith, C. A. (2016): The Pacific Decadal Oscillation, Revisited. Journal of Climate, 29, 4399-4427.",
-  "retrieved_utc": "2026-11-03T10:57:30.813829+00:00",
-  "source_sha256": "2a72a7f91c0740a4274c257a98cda05d2317d58c3e1c7c0b6cc56ea0f8f4d9f4"
+  "retrieved_utc": "2026-11-05T11:01:34.373672+00:00",
+  "source_sha256": "9e148a0ffe81a3bbe4fb61d46338b5c43ee83041a2b22fbaa99f82a3657b1551"
 }

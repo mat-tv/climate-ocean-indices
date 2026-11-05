@@ -24,12 +24,12 @@
     "amo": 0.28
   },
   "last_record": {
-    "date": "2026-09-01",
+    "date": "2026-10-01",
     "year": 2026,
-    "month": 9,
+    "month": 10,
     "amo": 1.25
   },
-  "number_of_records": 2073,
-  "retrieved_utc": "2026-11-03T10:57:30.874842+00:00",
-  "source_sha256": "757745a16d4a5fb59abb73ea0b92b1c3c8d39d95bf3c3e5bc607d2459e488101"
+  "number_of_records": 2074,
+  "retrieved_utc": "2026-11-05T11:01:34.449862+00:00",
+  "source_sha256": "7fdd8cf7aa44dda71a1ad675fa336cd1912227bc9b0634812757a8172852700f"
 }
