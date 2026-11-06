@@ -4009,5 +4009,12 @@
     "month": 9,
     "season": "AS",
     "mei": 2.37
+  },
+  {
+    "date": "2026-10-01",
+    "year": 2026,
+    "month": 10,
+    "season": "SO",
+    "mei": 2.53
   }
 ]
