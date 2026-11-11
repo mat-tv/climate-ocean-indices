@@ -34,18 +34,18 @@
     "anomaly": -0.057
   },
   "last_record": {
-    "date": "2026-11-08",
+    "date": "2026-11-09",
     "year": 2026,
     "month": 11,
-    "day": 8,
-    "extent": 15.312,
-    "climatology_1981_2010": 16.762,
-    "anomaly": -1.45
+    "day": 9,
+    "extent": 15.268,
+    "climatology_1981_2010": 16.667,
+    "anomaly": -1.399
   },
-  "number_of_records": 15895,
-  "retrieved_utc": "2026-11-10T11:18:48.086037+00:00",
+  "number_of_records": 15896,
+  "retrieved_utc": "2026-11-11T11:05:08.227338+00:00",
   "source_sha256": {
-    "sea_ice": "9a568d6dd9901ef724e4b5945e76980b9070e389b6512d64cfc5a32bb2496fd8",
+    "sea_ice": "9033c13512596b864ceaee883b86815655e55f60e5438c1eba1c1810ab12989d",
     "sea_ice_climatology": "18c8e6285ac3805277664ea89acec65e09b8bc6826acdb7dbe5ee2ef3ac5eb41"
   }
 }
